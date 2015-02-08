@@ -12,9 +12,11 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'duunissa' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'duunissa' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'duunissa' ), 'Duunissa WP Theme', '<a href="http://mihkellind.com" rel="designer">Mihkel Lind</a>' ); ?>
+			
+			<p>Copyright 2015 Mihkel Lind<span class="sep"> | </span><?php printf( __( '%1$s by %2$s.', 'duunissa' ), 'Theme designed', '<a href="http://mihkellind.com" rel="designer">Mihkel Lind</a>' ); ?></p>
+			
+			
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

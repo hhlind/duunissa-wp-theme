@@ -403,10 +403,10 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px; }
+  padding: .5rem; }
 
 textarea {
-  padding-left: 3px;
+  padding-left: .5rem;
   width: 100%; }
 
 /*--------------------------------------------------------------
@@ -416,11 +416,11 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #404040; }
   a:visited {
-    color: purple; }
+    color: #333; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #333; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
