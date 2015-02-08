@@ -40,6 +40,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 12.0 Media
 	12.1 Captions
 	12.2 Galleries
+13.0
+	13.1 Theme styles
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Normalize
@@ -705,5 +707,15 @@ object {
 
 .gallery-caption {
   display: block; }
+
+/*--------------------------------------------------------------
+13.0 Theme styles
+--------------------------------------------------------------*/
+.content-area {
+  max-width: 40rem;
+  margin: auto; }
+
+main {
+  margin: 0 1rem; }
 
 /*# sourceMappingURL=style.css.map */
