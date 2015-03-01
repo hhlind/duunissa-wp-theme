@@ -1,0 +1,72 @@
+$body-bg: #F2F2F2;
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  font-family: arial;
+  color: #333;
+  background: $body-bg;
+}
+h1, h2, h3, h4 {
+  
+  font-weight: bold; 
+  font-style: normal; 
+  text-transform: uppercase;
+
+}
+h1 {
+  font-size: 1.25rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Sanitation */
+hr {
+  border: 1px solid;
+  margin: 5rem 0 0 0;
+  color: silver;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+b, strong, em, small, code {
+  line-height: 1;
+}
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4rem;
+}
+sub {
+  top: 0.4rem;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+}
+
+.screen-reader-text {
+  display: none;
+}
