@@ -13,9 +13,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			
-			<p>Copyright 2015 Mihkel Lind<span class="sep"> | </span><?php printf( __( '%1$s by %2$s.', 'duunissa' ), 'Theme designed', '<a href="http://mihkellind.com" rel="designer">Mihkel Lind</a>' ); ?></p>
-			
-			
+			<p>Copyright 2015 Mihkel Lind</p>
 			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

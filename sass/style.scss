@@ -69,7 +69,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
-
+@import "partials/article";
+@import "partials/form-elements";
+@import "partials/footer";
 
 /*--------------------------------------------------------------
 6.0 Accessibility
