@@ -44,7 +44,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 13.0
 	13.1 Theme styles
 --------------------------------------------------------------*/
-
+@import "variables/typography";
+@import "variables/color";
 
 /*--------------------------------------------------------------
 1.0 Normalize
@@ -54,7 +55,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
-@import "webfonts/MyFontsWebfontsKit";
+
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -69,6 +70,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
+@import "header/navigation";
 @import "partials/article";
 @import "partials/form-elements";
 @import "partials/footer";

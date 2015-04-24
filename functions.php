@@ -102,6 +102,10 @@ add_action( 'widgets_init', 'duunissa_widgets_init' );
 function duunissa_scripts() {
 	wp_enqueue_style( 'duunissa-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.11.2.min.js', array(), '1.11.2', true );
+
+	wp_enqueue_script( 'nav-toggle', get_template_directory_uri() . '/js/nav-toggle.js', array( 'jquery' ), true );
+
 	wp_enqueue_script( 'duunissa-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'duunissa-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -136,3 +140,16 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+* Modify read more to start top of post
+*/
+function remove_more_link_scroll( $link ) {
+	$link = preg_replace( '|#more-[0-9]+|', '', $link );
+	return $link;
+}
+add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
+
+
+
+

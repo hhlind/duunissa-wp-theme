@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: Duunissa WP Theme
 Theme URI: http://underscores.me/
@@ -47,7 +46,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
-@import url("//hello.myfonts.net/count/2d6d94");
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -227,49 +225,29 @@ th {
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
-/**
- * @license
- * MyFonts Webfont Build ID 2977172, 2015-02-22T12:06:35-0500
- * 
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
- * explicitly restricted from using the Licensed Webfonts(s).
- * 
- * You may obtain a valid license at the URLs below.
- * 
- * Webfont: BrandonText-Regular by HVD Fonts
- * URL: http://www.myfonts.com/fonts/hvdfonts/brandon-text/regular/
- * Copyright: Copyright (c) 2012 by Hannes von Doehren. All rights reserved.
- * Licensed pageviews: 10,000
- * 
- * 
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=2977172
- * 
- * © 2015 MyFonts Inc
-*/
-/* @import must be at top of file, otherwise CSS will not work */
-@font-face {
-  font-family: 'BrandonText-Regular';
-  src: url("webfonts/2D6D94_0_0.eot");
-  src: url("webfonts/2D6D94_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/2D6D94_0_0.woff2") format("woff2"), url("webfonts/2D6D94_0_0.woff") format("woff"), url("webfonts/2D6D94_0_0.ttf") format("truetype"); }
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
 .site-header {
   margin: 2rem 1rem; }
-  .site-header a {
+  .site-header .brand-link {
     border-top: 2px solid;
     border-bottom: 2px solid;
     display: inline-block;
     text-decoration: none;
-    color: #333; }
+    color: #9dbeb5;
+    float: left;
+    display: inline-block;
+    box-sizing: border-box; }
+    .site-header .brand-link:hover {
+      color: #333333; }
 
 .site-title {
   margin: 0.5rem 0.75rem 0.25rem 0.75rem;
   font-size: 1.25rem; }
 
-.site-description {
-  display: none; }
+.clearfix {
+  clear: both; }
 
 /*--------------------------------------------------------------
 4.0 Forms
@@ -281,17 +259,18 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0 auto;
-  font-family: arial;
-  color: #333;
-  background: #F2F2F2; }
+  font-family: "chaparral-pro", sans-serif;
+  color: #444;
+  background: #F1F1F1; }
 
 h1, h2, h3, h4 {
+  font-family: "proxima-nova-alt-condensed", sans-serif;
   font-weight: bold;
-  font-style: normal;
+  font-weight: 800;
   text-transform: uppercase; }
 
 h1 {
-  font-size: 1.25rem; }
+  font-size: 1.75rem; }
 
 h2 {
   font-size: 1.5rem; }
@@ -329,10 +308,22 @@ sub {
 
 a {
   text-decoration: none;
-  color: #333; }
+  color: #444; }
 
 img {
   max-width: 100%; }
+
+code, pre {
+  font-family: Courier New, monospace; }
+
+pre {
+  display: block;
+  padding: 0.75rem;
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  border: 1px solid #d9d9d9;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
 
 .screen-reader-text {
   display: none; }
@@ -340,12 +331,42 @@ img {
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
+#nav-panel {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: lightblue; }
+
+.hidden {
+  display: none; }
+
+.nav-button {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  display: inline-block;
+  text-decoration: none;
+  color: #9dbeb5;
+  font-size: 1.25rem;
+  font-family: "proxima-nova-alt-condensed", sans-serif;
+  float: right;
+  padding: 0.5rem 0.75rem 0.25rem 0.75rem;
+  box-sizing: border-box;
+  text-align: right;
+  display: inline-block; }
+  .nav-button:hover {
+    color: #333333; }
+
 article {
-  padding: 4rem 0; }
+  padding: 3rem 0; }
 
 .entry-title {
-  margin: 0;
-  width: 60%; }
+  font-family: "proxima-nova-alt-condensed", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 0.25rem; }
 
 .entry-header,
 .entry-content,
@@ -353,29 +374,22 @@ article {
 .comments-area {
   max-width: 40rem;
   margin: 0 auto;
-  padding: 1rem; }
-
-.entry-header h1 {
-  line-height: 1.3; }
+  padding: 0.5rem 1rem; }
 
 .entry-meta {
-  color: grey; }
-  .entry-meta::after {
-    content: " ";
-    width: 2rem;
-    height: 4px;
-    background: #000;
-    display: block;
-    margin-top: 0.25rem; }
+  font-size: 0.8rem; }
 
-.front-page-article p:last-of-type a {
+.more-link {
   width: 7rem;
   text-align: center;
-  float: right;
-  display: block;
+  display: inline-block;
   padding: 0.5rem 1rem;
   border: 2px solid #444;
   border-radius: 2px; }
+
+.more-link:hover {
+  background-color: #444;
+  color: #fff; }
 
 label {
   display: block; }

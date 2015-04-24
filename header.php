@@ -15,7 +15,17 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 
-
+<script src='<?php bloginfo("template_url"); ?>/js/fastclick.js'></script>
+<script>
+	if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+}
+</script>
+</script>
+<script src="//use.typekit.net/xhz0hcz.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 <?php wp_head(); ?>
 </head>
 
@@ -23,17 +33,20 @@
 <div id="page" class="hfeed site">
 	
 	<header id="masthead" class="site-header" role="banner">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+		<a class="brand-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<div class="site-branding">
 				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div><!-- .site-branding -->
 		</a>
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'duunissa' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<a href="#" class="nav-button">Info</a>
+		<div class="clearfix"></div>
 	</header><!-- #masthead -->
+
+	<div class="nav-panel hidden">
+	<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
+	</div>
 
 	<div id="content" class="site-content">
